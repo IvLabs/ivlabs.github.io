@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{% comment %}
+    A general page layout. Used by default for all content on the site.
+{% endcomment %}
+
+{% include breadcrumbs.html class="content-narrow" %}
+
+<div class="container pure-g">
+    <div class="pure-u-1">
+        <div class="content content-narrow">
+            {{ content }}
+        </div>
+    </div>
+</div>

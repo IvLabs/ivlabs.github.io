@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{% comment %}
+  This layout is used by the jekyll-archives plugin to generate
+  archive pages for all posts
+{% endcomment %}
+
+<h1>Archive of posts from {{ page.date | date: "%Y" }}</h1>
+
+<ul class="posts-list">
+{% for post in page.posts %}
+  <li>
+    <a class="post-link" href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+		<div class="post-date">{{ post.date | date: "%b %-d, %Y" }}</div>
+  </li>
+{% endfor %}
+</ul>
